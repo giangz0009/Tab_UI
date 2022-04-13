@@ -1,0 +1,93 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+body > .tab-ui {
+  max-width: 720px;
+}
+
+.tabs {
+  position: relative;
+  display: flex;
+}
+
+.tabs .line {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 6px;
+  border-radius: 15px;
+  background-color: #c23564;
+  transition: all 0.2s ease;
+}
+
+.tab__item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 80px;
+  padding: 16px 20px 11px 20px;
+  color: #c23564;
+  font-size: 2rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #fff;
+  border-bottom: 5px solid transparent;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.tab__item > i {
+  font-size: 2.4rem;
+  width: 40px;
+}
+
+.tab__item:hover {
+  opacity: 1;
+  background-color: rgba(194, 53, 100, 0.05);
+  border-color: rgba(194, 53, 100, 0.1);
+}
+
+.tab__item.tab__item--active {
+  opacity: 1;
+}
+
+.tab__item.tab__item--active > p {
+  color: black;
+}
+
+.tab-contents {
+  min-height: 190px;
+  padding: 28px 0;
+}
+
+.tab__pane {
+  color: #333;
+  display: none;
+  font-size: 1.8rem;
+}
+
+.tab__pane.tab__pane--active {
+  display: block;
+}
+
+.tab__pane h3 {
+  font-size: 2.4rem;
+  margin-bottom: 8px;
+}
